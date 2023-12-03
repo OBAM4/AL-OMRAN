@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AlOmranModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'AlOmran.dbo.Affectation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Affectation">
+    <Key>
+      <PropertyRef Name="DateAffec" />
+      <PropertyRef Name="IdMate" />
+      <PropertyRef Name="IdCollab" />
+    </Key>
+    <Property Name="DateAffec" Type="date" Nullable="false" />
+    <Property Name="IdMate" Type="int" Nullable="false" />
+    <Property Name="IdCollab" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Categorie">
+    <Key>
+      <PropertyRef Name="IDCateg" />
+    </Key>
+    <Property Name="IDCateg" Type="int" Nullable="false" />
+    <Property Name="NomCateg" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Collaborateur">
+    <Key>
+      <PropertyRef Name="IdCollab" />
+    </Key>
+    <Property Name="IdCollab" Type="int" Nullable="false" />
+    <Property Name="MatriculeCollab" Type="int" Nullable="false" />
+    <Property Name="NomCollab" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="PrenomCollab" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Ville" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="IdEntite" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Entite">
+    <Key>
+      <PropertyRef Name="IdEntite" />
+    </Key>
+    <Property Name="IdEntite" Type="int" Nullable="false" />
+    <Property Name="NomEntite" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="NomAgence" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Marque">
+    <Key>
+      <PropertyRef Name="IDMarque" />
+    </Key>
+    <Property Name="IDMarque" Type="int" Nullable="false" />
+    <Property Name="NomMarque" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Materiel">
+    <Key>
+      <PropertyRef Name="IdMate" />
+    </Key>
+    <Property Name="IdMate" Type="int" Nullable="false" />
+    <Property Name="NumInven" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="NomMate" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="DateAchat" Type="date" Nullable="false" />
+    <Property Name="IDCateg" Type="int" Nullable="false" />
+    <Property Name="IDMarque" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Affectati__IdCol__4BAC3F29">
+    <End Role="Collaborateur" Type="Self.Collaborateur" Multiplicity="1" />
+    <End Role="Affectation" Type="Self.Affectation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Collaborateur">
+        <PropertyRef Name="IdCollab" />
+      </Principal>
+      <Dependent Role="Affectation">
+        <PropertyRef Name="IdCollab" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Affectati__IdMat__4AB81AF0">
+    <End Role="Materiel" Type="Self.Materiel" Multiplicity="1" />
+    <End Role="Affectation" Type="Self.Affectation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Materiel">
+        <PropertyRef Name="IdMate" />
+      </Principal>
+      <Dependent Role="Affectation">
+        <PropertyRef Name="IdMate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Collabora__IdEnt__3F466844">
+    <End Role="Entite" Type="Self.Entite" Multiplicity="1" />
+    <End Role="Collaborateur" Type="Self.Collaborateur" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Entite">
+        <PropertyRef Name="IdEntite" />
+      </Principal>
+      <Dependent Role="Collaborateur">
+        <PropertyRef Name="IdEntite" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Materiel__IDCate__47DBAE45">
+    <End Role="Categorie" Type="Self.Categorie" Multiplicity="1" />
+    <End Role="Materiel" Type="Self.Materiel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorie">
+        <PropertyRef Name="IDCateg" />
+      </Principal>
+      <Dependent Role="Materiel">
+        <PropertyRef Name="IDCateg" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Materiel__IDMarq__48CFD27E">
+    <End Role="Marque" Type="Self.Marque" Multiplicity="1" />
+    <End Role="Materiel" Type="Self.Materiel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Marque">
+        <PropertyRef Name="IDMarque" />
+      </Principal>
+      <Dependent Role="Materiel">
+        <PropertyRef Name="IDMarque" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AlOmranModelStoreContainer">
+    <EntitySet Name="Categorie" EntityType="Self.Categorie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Collaborateur" EntityType="Self.Collaborateur" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Entite" EntityType="Self.Entite" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Marque" EntityType="Self.Marque" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Materiel" EntityType="Self.Materiel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Affectation" EntityType="Self.Affectation" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Affectation].[DateAffec] AS [DateAffec], 
+    [Affectation].[IdMate] AS [IdMate], 
+    [Affectation].[IdCollab] AS [IdCollab]
+    FROM [dbo].[Affectation] AS [Affectation]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Affectati__IdCol__4BAC3F29" Association="Self.FK__Affectati__IdCol__4BAC3F29">
+      <End Role="Collaborateur" EntitySet="Collaborateur" />
+      <End Role="Affectation" EntitySet="Affectation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Affectati__IdMat__4AB81AF0" Association="Self.FK__Affectati__IdMat__4AB81AF0">
+      <End Role="Materiel" EntitySet="Materiel" />
+      <End Role="Affectation" EntitySet="Affectation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Collabora__IdEnt__3F466844" Association="Self.FK__Collabora__IdEnt__3F466844">
+      <End Role="Entite" EntitySet="Entite" />
+      <End Role="Collaborateur" EntitySet="Collaborateur" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Materiel__IDCate__47DBAE45" Association="Self.FK__Materiel__IDCate__47DBAE45">
+      <End Role="Categorie" EntitySet="Categorie" />
+      <End Role="Materiel" EntitySet="Materiel" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Materiel__IDMarq__48CFD27E" Association="Self.FK__Materiel__IDMarq__48CFD27E">
+      <End Role="Marque" EntitySet="Marque" />
+      <End Role="Materiel" EntitySet="Materiel" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

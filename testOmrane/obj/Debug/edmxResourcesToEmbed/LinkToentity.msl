@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AlOmranModelStoreContainer" CdmEntityContainer="AlOmranEntities">
+    <EntitySetMapping Name="Categorie">
+      <EntityTypeMapping TypeName="AlOmranModel.Categorie">
+        <MappingFragment StoreEntitySet="Categorie">
+          <ScalarProperty Name="IDCateg" ColumnName="IDCateg" />
+          <ScalarProperty Name="NomCateg" ColumnName="NomCateg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Collaborateur">
+      <EntityTypeMapping TypeName="AlOmranModel.Collaborateur">
+        <MappingFragment StoreEntitySet="Collaborateur">
+          <ScalarProperty Name="IdCollab" ColumnName="IdCollab" />
+          <ScalarProperty Name="MatriculeCollab" ColumnName="MatriculeCollab" />
+          <ScalarProperty Name="NomCollab" ColumnName="NomCollab" />
+          <ScalarProperty Name="PrenomCollab" ColumnName="PrenomCollab" />
+          <ScalarProperty Name="Ville" ColumnName="Ville" />
+          <ScalarProperty Name="IdEntite" ColumnName="IdEntite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Entite">
+      <EntityTypeMapping TypeName="AlOmranModel.Entite">
+        <MappingFragment StoreEntitySet="Entite">
+          <ScalarProperty Name="IdEntite" ColumnName="IdEntite" />
+          <ScalarProperty Name="NomEntite" ColumnName="NomEntite" />
+          <ScalarProperty Name="NomAgence" ColumnName="NomAgence" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Marque">
+      <EntityTypeMapping TypeName="AlOmranModel.Marque">
+        <MappingFragment StoreEntitySet="Marque">
+          <ScalarProperty Name="IDMarque" ColumnName="IDMarque" />
+          <ScalarProperty Name="NomMarque" ColumnName="NomMarque" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Materiel">
+      <EntityTypeMapping TypeName="AlOmranModel.Materiel">
+        <MappingFragment StoreEntitySet="Materiel">
+          <ScalarProperty Name="IdMate" ColumnName="IdMate" />
+          <ScalarProperty Name="NumInven" ColumnName="NumInven" />
+          <ScalarProperty Name="NomMate" ColumnName="NomMate" />
+          <ScalarProperty Name="DateAchat" ColumnName="DateAchat" />
+          <ScalarProperty Name="IDCateg" ColumnName="IDCateg" />
+          <ScalarProperty Name="IDMarque" ColumnName="IDMarque" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Affectation">
+      <EntityTypeMapping TypeName="AlOmranModel.Affectation">
+        <MappingFragment StoreEntitySet="Affectation">
+          <ScalarProperty Name="DateAffec" ColumnName="DateAffec" />
+          <ScalarProperty Name="IdMate" ColumnName="IdMate" />
+          <ScalarProperty Name="IdCollab" ColumnName="IdCollab" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

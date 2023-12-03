@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AlOmranModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Categorie">
+    <Key>
+      <PropertyRef Name="IDCateg" />
+    </Key>
+    <Property Name="IDCateg" Type="Int32" Nullable="false" />
+    <Property Name="NomCateg" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Materiels" Relationship="Self.FK__Materiel__IDCate__47DBAE45" FromRole="Categorie" ToRole="Materiel" />
+  </EntityType>
+  <EntityType Name="Collaborateur">
+    <Key>
+      <PropertyRef Name="IdCollab" />
+    </Key>
+    <Property Name="IdCollab" Type="Int32" Nullable="false" />
+    <Property Name="MatriculeCollab" Type="Int32" Nullable="false" />
+    <Property Name="NomCollab" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PrenomCollab" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ville" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdEntite" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Affectations" Relationship="Self.FK__Affectati__IdCol__4BAC3F29" FromRole="Collaborateur" ToRole="Affectation" />
+    <NavigationProperty Name="Entite" Relationship="Self.FK__Collabora__IdEnt__3F466844" FromRole="Collaborateur" ToRole="Entite" />
+  </EntityType>
+  <EntityType Name="Entite">
+    <Key>
+      <PropertyRef Name="IdEntite" />
+    </Key>
+    <Property Name="IdEntite" Type="Int32" Nullable="false" />
+    <Property Name="NomEntite" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NomAgence" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Collaborateurs" Relationship="Self.FK__Collabora__IdEnt__3F466844" FromRole="Entite" ToRole="Collaborateur" />
+  </EntityType>
+  <EntityType Name="Marque">
+    <Key>
+      <PropertyRef Name="IDMarque" />
+    </Key>
+    <Property Name="IDMarque" Type="Int32" Nullable="false" />
+    <Property Name="NomMarque" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Materiels" Relationship="Self.FK__Materiel__IDMarq__48CFD27E" FromRole="Marque" ToRole="Materiel" />
+  </EntityType>
+  <EntityType Name="Materiel">
+    <Key>
+      <PropertyRef Name="IdMate" />
+    </Key>
+    <Property Name="IdMate" Type="Int32" Nullable="false" />
+    <Property Name="NumInven" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NomMate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateAchat" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IDCateg" Type="Int32" Nullable="false" />
+    <Property Name="IDMarque" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Categorie" Relationship="Self.FK__Materiel__IDCate__47DBAE45" FromRole="Materiel" ToRole="Categorie" />
+    <NavigationProperty Name="Marque" Relationship="Self.FK__Materiel__IDMarq__48CFD27E" FromRole="Materiel" ToRole="Marque" />
+    <NavigationProperty Name="Affectations" Relationship="Self.FK__Affectati__IdMat__4AB81AF0" FromRole="Materiel" ToRole="Affectation" />
+  </EntityType>
+  <EntityType Name="Affectation">
+    <Key>
+      <PropertyRef Name="DateAffec" />
+      <PropertyRef Name="IdMate" />
+      <PropertyRef Name="IdCollab" />
+    </Key>
+    <Property Name="DateAffec" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IdMate" Type="Int32" Nullable="false" />
+    <Property Name="IdCollab" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Collaborateur" Relationship="Self.FK__Affectati__IdCol__4BAC3F29" FromRole="Affectation" ToRole="Collaborateur" />
+    <NavigationProperty Name="Materiel" Relationship="Self.FK__Affectati__IdMat__4AB81AF0" FromRole="Affectation" ToRole="Materiel" />
+  </EntityType>
+  <Association Name="FK__Materiel__IDCate__47DBAE45">
+    <End Role="Categorie" Type="Self.Categorie" Multiplicity="1" />
+    <End Role="Materiel" Type="Self.Materiel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorie">
+        <PropertyRef Name="IDCateg" />
+      </Principal>
+      <Dependent Role="Materiel">
+        <PropertyRef Name="IDCateg" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Affectati__IdCol__4BAC3F29">
+    <End Role="Collaborateur" Type="Self.Collaborateur" Multiplicity="1" />
+    <End Role="Affectation" Type="Self.Affectation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Collaborateur">
+        <PropertyRef Name="IdCollab" />
+      </Principal>
+      <Dependent Role="Affectation">
+        <PropertyRef Name="IdCollab" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Collabora__IdEnt__3F466844">
+    <End Role="Entite" Type="Self.Entite" Multiplicity="1" />
+    <End Role="Collaborateur" Type="Self.Collaborateur" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Entite">
+        <PropertyRef Name="IdEntite" />
+      </Principal>
+      <Dependent Role="Collaborateur">
+        <PropertyRef Name="IdEntite" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Materiel__IDMarq__48CFD27E">
+    <End Role="Marque" Type="Self.Marque" Multiplicity="1" />
+    <End Role="Materiel" Type="Self.Materiel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Marque">
+        <PropertyRef Name="IDMarque" />
+      </Principal>
+      <Dependent Role="Materiel">
+        <PropertyRef Name="IDMarque" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Affectati__IdMat__4AB81AF0">
+    <End Role="Materiel" Type="Self.Materiel" Multiplicity="1" />
+    <End Role="Affectation" Type="Self.Affectation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Materiel">
+        <PropertyRef Name="IdMate" />
+      </Principal>
+      <Dependent Role="Affectation">
+        <PropertyRef Name="IdMate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AlOmranEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="Self.Categorie" />
+    <EntitySet Name="Collaborateurs" EntityType="Self.Collaborateur" />
+    <EntitySet Name="Entites" EntityType="Self.Entite" />
+    <EntitySet Name="Marques" EntityType="Self.Marque" />
+    <EntitySet Name="Materiels" EntityType="Self.Materiel" />
+    <EntitySet Name="Affectations" EntityType="Self.Affectation" />
+    <AssociationSet Name="FK__Materiel__IDCate__47DBAE45" Association="Self.FK__Materiel__IDCate__47DBAE45">
+      <End Role="Categorie" EntitySet="Categories" />
+      <End Role="Materiel" EntitySet="Materiels" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Affectati__IdCol__4BAC3F29" Association="Self.FK__Affectati__IdCol__4BAC3F29">
+      <End Role="Collaborateur" EntitySet="Collaborateurs" />
+      <End Role="Affectation" EntitySet="Affectations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Collabora__IdEnt__3F466844" Association="Self.FK__Collabora__IdEnt__3F466844">
+      <End Role="Entite" EntitySet="Entites" />
+      <End Role="Collaborateur" EntitySet="Collaborateurs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Materiel__IDMarq__48CFD27E" Association="Self.FK__Materiel__IDMarq__48CFD27E">
+      <End Role="Marque" EntitySet="Marques" />
+      <End Role="Materiel" EntitySet="Materiels" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Affectati__IdMat__4AB81AF0" Association="Self.FK__Affectati__IdMat__4AB81AF0">
+      <End Role="Materiel" EntitySet="Materiels" />
+      <End Role="Affectation" EntitySet="Affectations" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

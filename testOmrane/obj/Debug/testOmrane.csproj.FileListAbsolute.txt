@@ -1,0 +1,53 @@
+C:\Users\Ikram Jaadar\Desktop\TESTOMRANE\testOmrane\testOmrane\bin\Debug\testOmrane.exe.config
+C:\Users\Ikram Jaadar\Desktop\TESTOMRANE\testOmrane\testOmrane\bin\Debug\testOmrane.exe
+C:\Users\Ikram Jaadar\Desktop\TESTOMRANE\testOmrane\testOmrane\bin\Debug\testOmrane.pdb
+C:\Users\Ikram Jaadar\Desktop\TESTOMRANE\testOmrane\testOmrane\obj\Debug\testOmrane.csprojAssemblyReference.cache
+C:\Users\Ikram Jaadar\Desktop\TESTOMRANE\testOmrane\testOmrane\obj\Debug\testOmrane.Form1.resources
+C:\Users\Ikram Jaadar\Desktop\TESTOMRANE\testOmrane\testOmrane\obj\Debug\testOmrane.Properties.Resources.resources
+C:\Users\Ikram Jaadar\Desktop\TESTOMRANE\testOmrane\testOmrane\obj\Debug\testOmrane.csproj.GenerateResource.cache
+C:\Users\Ikram Jaadar\Desktop\TESTOMRANE\testOmrane\testOmrane\obj\Debug\testOmrane.csproj.CoreCompileInputs.cache
+C:\Users\Ikram Jaadar\Desktop\TESTOMRANE\testOmrane\testOmrane\obj\Debug\testOmrane.exe
+C:\Users\Ikram Jaadar\Desktop\TESTOMRANE\testOmrane\testOmrane\obj\Debug\testOmrane.pdb
+C:\Users\Ikram Jaadar\Desktop\TESTOMRANE\testOmrane\testOmrane\bin\Debug\EntityFramework.dll
+C:\Users\Ikram Jaadar\Desktop\TESTOMRANE\testOmrane\testOmrane\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ikram Jaadar\Desktop\TESTOMRANE\testOmrane\testOmrane\bin\Debug\EntityFramework.xml
+C:\Users\Ikram Jaadar\Desktop\TESTOMRANE\testOmrane\testOmrane\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ikram Jaadar\Desktop\TESTOMRANE\testOmrane\testOmrane\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\Ikram Jaadar\Desktop\TESTOMRANE\testOmrane\testOmrane\obj\Debug\testOmrane.Collabarateur.resources
+C:\Users\Ikram Jaadar\Desktop\TESTOMRANE\testOmrane\testOmrane\obj\Debug\testOmrane.csproj.CopyComplete
+C:\Users\walid\Desktop\testOmrane\testOmrane\testOmrane\bin\Debug\testOmrane.exe.config
+C:\Users\walid\Desktop\testOmrane\testOmrane\testOmrane\bin\Debug\testOmrane.exe
+C:\Users\walid\Desktop\testOmrane\testOmrane\testOmrane\bin\Debug\testOmrane.pdb
+C:\Users\walid\Desktop\testOmrane\testOmrane\testOmrane\bin\Debug\EntityFramework.dll
+C:\Users\walid\Desktop\testOmrane\testOmrane\testOmrane\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\walid\Desktop\testOmrane\testOmrane\testOmrane\bin\Debug\EntityFramework.xml
+C:\Users\walid\Desktop\testOmrane\testOmrane\testOmrane\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\walid\Desktop\testOmrane\testOmrane\testOmrane\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\walid\Desktop\testOmrane\testOmrane\testOmrane\obj\Debug\testOmrane.csprojAssemblyReference.cache
+C:\Users\walid\Desktop\testOmrane\testOmrane\testOmrane\obj\Debug\testOmrane.Form1.resources
+C:\Users\walid\Desktop\testOmrane\testOmrane\testOmrane\obj\Debug\testOmrane.Properties.Resources.resources
+C:\Users\walid\Desktop\testOmrane\testOmrane\testOmrane\obj\Debug\testOmrane.csproj.GenerateResource.cache
+C:\Users\walid\Desktop\testOmrane\testOmrane\testOmrane\obj\Debug\testOmrane.csproj.CoreCompileInputs.cache
+C:\Users\walid\Desktop\testOmrane\testOmrane\testOmrane\obj\Debug\testOmrane.csproj.CopyComplete
+C:\Users\walid\Desktop\testOmrane\testOmrane\testOmrane\obj\Debug\testOmrane.exe
+C:\Users\walid\Desktop\testOmrane\testOmrane\testOmrane\obj\Debug\testOmrane.pdb
+C:\Users\walid\Desktop\testOmrane\testOmrane\testOmrane\obj\Debug\testOmrane.FORMS.Colaborateure.resources
+C:\Users\walid\Desktop\testOmrane\testOmrane\testOmrane\obj\Debug\testOmrane.FORMS.Materiel.resources
+C:\Users\walid\Desktop\testOmrane (1)\testOmrane\testOmrane\bin\Debug\testOmrane.exe.config
+C:\Users\walid\Desktop\testOmrane (1)\testOmrane\testOmrane\bin\Debug\testOmrane.exe
+C:\Users\walid\Desktop\testOmrane (1)\testOmrane\testOmrane\bin\Debug\testOmrane.pdb
+C:\Users\walid\Desktop\testOmrane (1)\testOmrane\testOmrane\bin\Debug\EntityFramework.dll
+C:\Users\walid\Desktop\testOmrane (1)\testOmrane\testOmrane\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\walid\Desktop\testOmrane (1)\testOmrane\testOmrane\bin\Debug\EntityFramework.xml
+C:\Users\walid\Desktop\testOmrane (1)\testOmrane\testOmrane\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\walid\Desktop\testOmrane (1)\testOmrane\testOmrane\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\walid\Desktop\testOmrane (1)\testOmrane\testOmrane\obj\Debug\testOmrane.csprojAssemblyReference.cache
+C:\Users\walid\Desktop\testOmrane (1)\testOmrane\testOmrane\obj\Debug\testOmrane.Form1.resources
+C:\Users\walid\Desktop\testOmrane (1)\testOmrane\testOmrane\obj\Debug\testOmrane.FORMS.Colaborateure.resources
+C:\Users\walid\Desktop\testOmrane (1)\testOmrane\testOmrane\obj\Debug\testOmrane.FORMS.Materiel.resources
+C:\Users\walid\Desktop\testOmrane (1)\testOmrane\testOmrane\obj\Debug\testOmrane.Properties.Resources.resources
+C:\Users\walid\Desktop\testOmrane (1)\testOmrane\testOmrane\obj\Debug\testOmrane.csproj.GenerateResource.cache
+C:\Users\walid\Desktop\testOmrane (1)\testOmrane\testOmrane\obj\Debug\testOmrane.csproj.CoreCompileInputs.cache
+C:\Users\walid\Desktop\testOmrane (1)\testOmrane\testOmrane\obj\Debug\testOmrane.csproj.CopyComplete
+C:\Users\walid\Desktop\testOmrane (1)\testOmrane\testOmrane\obj\Debug\testOmrane.exe
+C:\Users\walid\Desktop\testOmrane (1)\testOmrane\testOmrane\obj\Debug\testOmrane.pdb
